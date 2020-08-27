@@ -1,6 +1,17 @@
 <template lang="pug">
-    div
+    v-app
 </template>
 
-<style>
-</style>
+<script>
+
+export default {
+  name: 'App',
+
+  components: {
+  },
+
+  data: () => ({
+    //
+  }),
+};
+</script>
