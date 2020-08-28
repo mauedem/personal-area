@@ -1,0 +1,9 @@
+{
+  "users": [
+    {
+      "email": "bestemail@email.com",
+      "password": "$2a$10$fgwXkFenUuQg1wy0SuiZo.5LCE2V93dHXIwgAI6BqoMkw9dF9HEne",
+      "id": 1
+    }
+  ]
+}
