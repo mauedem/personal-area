@@ -1,21 +1,17 @@
 <template lang="pug">
     v-app
         v-main
-            login
+            router-view
+                slot
 </template>
 
 <script>
-import login from './views/login.vue';
 
 export default {
     name: 'App',
 
-    components: {
-        login,
+    async created() {
+        await this.$store.dispatch('getTokenFromLocalStorage');
     },
-
-    data: () => ({
-    //
-    }),
 };
 </script>

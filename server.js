@@ -7,6 +7,8 @@ const server = jsonServer.create();
 const router = jsonServer.router('db.json');
 const middlewares = jsonServer.defaults();
 
+server.db = router.db;
+
 server.use(middlewares);
 server.use(auth);
 server.use(router);

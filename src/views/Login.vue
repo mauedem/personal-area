@@ -61,7 +61,7 @@
 
 <script>
 export default {
-    name: 'login',
+    name: 'Login',
 
     data: () => ({
         email: '',
@@ -86,6 +86,8 @@ export default {
                     email: this.email,
                     password: this.password,
                 });
+
+                await this.$router.push({ name: 'personal_area' });
             } catch (err) {
                 this.error = true;
 

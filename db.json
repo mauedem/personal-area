@@ -2,8 +2,16 @@
   "users": [
     {
       "email": "bestemail@email.com",
-      "password": "$2a$10$fgwXkFenUuQg1wy0SuiZo.5LCE2V93dHXIwgAI6BqoMkw9dF9HEne",
-      "id": 1
+      "password": "$2a$10$NfiEct2XoAhCwn6txtPTAOeRjIwL4MKtLMNsjHv0qMPHcfhCHtO7G",
+      "id": 1,
+      "contacts": [
+          {
+              "name": "Anya"
+          },
+          {
+              "name": "Artem"
+          }
+      ]
     }
   ]
 }
