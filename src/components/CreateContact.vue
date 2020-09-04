@@ -38,7 +38,7 @@
                             outlined
                             width="350"
                             type="error"
-                        ) Name is required
+                        ) Name is required. 18 characters are allowed.
 
                         v-text-field(
                             label="Name"
@@ -60,7 +60,7 @@
                         )
 
             v-card-actions
-                v-spacer
+                <v-spacer></v-spacer>
                     v-btn(
                         color="primary"
                         text
@@ -75,10 +75,15 @@
 </template>
 
 <script>
+import { validationMixin } from '@/mixins/validationMixin';
+
 export default {
     name: 'CreateContact',
 
+    mixins: [validationMixin],
+
     data: () => ({
+
         dialog: false,
 
         name: '',
@@ -95,14 +100,9 @@ export default {
 
             this.nameError = false;
             this.phoneError = false;
-        },
 
-        isValid() {
-            this.nameError = this.name.length === 0;
-            this.phoneError = this.phone.length === 0
-                || !this.phone.match(/^\+?(\d{1,3})?[- .]?\(?(?:\d{2,3})\)?[- .]?\d\d\d[- .]?\d\d\d\d$/);
-
-            return !this.nameError && !this.phoneError;
+            this.name = '';
+            this.phone = '';
         },
 
         async createContact() {

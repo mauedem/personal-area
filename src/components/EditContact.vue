@@ -36,7 +36,7 @@
                             outlined
                             width="350"
                             type="error"
-                        ) Name is required
+                        ) Name is required. 18 characters are allowed.
 
                         v-text-field(
                             label="Name"
@@ -58,7 +58,7 @@
                         )
 
             v-card-actions
-                v-spacer
+                <v-spacer></v-spacer>
                     v-btn(
                         color="primary"
                         text
@@ -73,8 +73,12 @@
 </template>
 
 <script>
+import { validationMixin } from '@/mixins/validationMixin';
+
 export default {
     name: 'EditContact',
+
+    mixins: [validationMixin],
 
     props: {
         id: {
@@ -95,16 +99,22 @@ export default {
     }),
 
     methods: {
-        closeDialog() {
+        async closeDialog() {
             this.dialog = false;
+
+            this.nameError = false;
+            this.phoneError = false;
+
+            await this.getUserContacts();
         },
 
-        isValid() {
-            this.nameError = this.name.length === 0;
-            this.phoneError = this.phone.length === 0
-                || !this.phone.match(/^\+?(\d{1,3})?[- .]?\(?(?:\d{2,3})\)?[- .]?\d\d\d[- .]?\d\d\d\d$/);
+        async getUserContacts() {
+            const contacts = await this.$store.dispatch('getUserContacts');
 
-            return !this.nameError && !this.phoneError;
+            const result = contacts.find((contact) => contact.id === this.id);
+
+            this.name = result.name;
+            this.phone = result.phone;
         },
 
         async updateContact() {
@@ -132,12 +142,7 @@ export default {
         try {
             this.editError = false;
 
-            const contacts = await this.$store.dispatch('getUserContacts');
-
-            const result = contacts.find((contact) => contact.id === this.id);
-
-            this.name = result.name;
-            this.phone = result.phone;
+            await this.getUserContacts();
         } catch (err) {
             this.editError = true;
         }
