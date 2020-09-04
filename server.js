@@ -1,6 +1,4 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 const jsonServer = require('json-server');
-// eslint-disable-next-line import/no-extraneous-dependencies
 const auth = require('json-server-auth');
 
 const server = jsonServer.create();

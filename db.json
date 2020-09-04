@@ -3,15 +3,117 @@
     {
       "email": "bestemail@email.com",
       "password": "$2a$10$NfiEct2XoAhCwn6txtPTAOeRjIwL4MKtLMNsjHv0qMPHcfhCHtO7G",
-      "id": 1,
-      "contacts": [
-          {
-              "name": "Anya"
-          },
-          {
-              "name": "Artem"
-          }
-      ]
+      "id": 1
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Cayla Jacobi",
+      "phone": "927-620-3959",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "id": 3,
+      "name": "Jo Prohaska",
+      "phone": "468-960-6365",
+      "userId": 1
+    },
+    {
+      "id": 4,
+      "name": "Ashton Casper",
+      "phone": "396-870-7346",
+      "userId": 1
+    },
+    {
+      "id": 5,
+      "name": "Charlie Hettinger",
+      "phone": "766-924-5821",
+      "userId": 1
+    },
+    {
+      "id": 6,
+      "name": "Jazmyne Bogan",
+      "phone": "460-373-7087",
+      "userId": 1
+    },
+    {
+      "id": 7,
+      "name": "Joey Doyle",
+      "phone": "565-317-2126",
+      "userId": 1
+    },
+    {
+      "id": 8,
+      "name": "Vicky Lebsack",
+      "phone": "954-576-4153",
+      "userId": 1
+    },
+    {
+      "id": 9,
+      "name": "Tremaine Nicolas",
+      "phone": "520-431-8770",
+      "userId": 1
+    },
+    {
+      "id": 10,
+      "name": "Julian Rolfson",
+      "phone": "406-773-9264",
+      "userId": 1
+    },
+    {
+      "id": 11,
+      "name": "Parker Senger",
+      "phone": "965-959-4790",
+      "userId": 1
+    },
+    {
+      "id": 12,
+      "name": "Keira Green",
+      "phone": "695-529-5477",
+      "userId": 1
+    },
+    {
+      "id": 13,
+      "name": "Timmy Veum",
+      "phone": "463-688-3637",
+      "userId": 1
+    },
+    {
+      "id": 14,
+      "name": "Roxane Lakin",
+      "phone": "279-751-6292",
+      "userId": 1
+    },
+    {
+      "id": 15,
+      "name": "Clark Turcotte",
+      "phone": "358-493-0024",
+      "userId": 1
+    },
+    {
+      "id": 16,
+      "name": "Pierce Ledner",
+      "phone": "537-968-5193",
+      "userId": 1
+    },
+    {
+      "id": 17,
+      "name": "Julius Ullrich",
+      "phone": "656-226-2748",
+      "userId": 1
+    },
+    {
+      "id": 18,
+      "name": "Brenna Brakus",
+      "phone": "245-781-3823",
+      "userId": 1
+    },
+    {
+      "id": 19,
+      "name": "Donnell Keeling",
+      "phone": "507-495-0465",
+      "userId": 1
     }
   ]
 }

@@ -14,13 +14,6 @@ const routes = [
         path: '/personal_area',
         name: 'personal_area',
         component: () => import(/* webpackChunkName: "personal_area" */ '../views/PersonalArea.vue'),
-        // beforeEnter: (to, from, next) => {
-        //     if (!store.state.token) {
-        //         next('/');
-        //     } else {
-        //         next();
-        //     }
-        // },
     },
 ];
 

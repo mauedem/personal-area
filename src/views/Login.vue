@@ -44,6 +44,7 @@
                                 id="password"
                                 label="Password"
                                 name="password"
+                                autocomplete="on"
                                 prepend-icon="mdi-lock"
                                 :append-icon="passwordVisibility ? 'mdi-eye' : 'mdi-eye-off'"
                                 @click:append="togglePasswordVisible"
