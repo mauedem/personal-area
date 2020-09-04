@@ -8,10 +8,16 @@
   ],
   "contacts": [
     {
+      "id": 1,
       "name": "Cayla Jacobi",
       "phone": "927-620-3959",
-      "userId": 1,
-      "id": 1
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "name": "Marcus Douglas",
+      "phone": "685-440-3280",
+      "userId": 1
     },
     {
       "id": 3,
@@ -113,6 +119,12 @@
       "id": 19,
       "name": "Donnell Keeling",
       "phone": "507-495-0465",
+      "userId": 1
+    },
+    {
+      "id": 20,
+      "name": "Jovani Satterfield",
+      "phone": "499-651-0164",
       "userId": 1
     }
   ]

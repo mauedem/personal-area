@@ -50,7 +50,7 @@
                             outlined
                             width="350"
                             type="error"
-                        ) Phone is required
+                        ) Phone is required. Phone must be in format (xxx-xxx-xxxx).
 
                         v-text-field(
                             label="Phone"
@@ -101,7 +101,8 @@ export default {
 
         isValid() {
             this.nameError = this.name.length === 0;
-            this.phoneError = this.phone.length === 0;
+            this.phoneError = this.phone.length === 0
+                || !this.phone.match(/^\+?(\d{1,3})?[- .]?\(?(?:\d{2,3})\)?[- .]?\d\d\d[- .]?\d\d\d\d$/);
 
             return !this.nameError && !this.phoneError;
         },

@@ -19,15 +19,13 @@
             color="primary"
             dark
         )
-            v-col.ml-12.ml-xs-0(
-                xs="1"
-                cols="2"
+            v-col.pl-0.pl-sm-5.pl-md-12.pr-0(
+                cols="3"
             )
                 v-toolbar-title Contacts
 
             v-col.px-0(
-                cols="6"
-                xs="3"
+                cols="5"
             )
                 v-text-field(
                     flat
@@ -38,34 +36,34 @@
                     v-model="searchedText"
                 )
 
-            v-col.pr-0.ml-auto.pl-12(
-                xs="2"
-                cols="3"
+            v-col.ml-md-12.ml-sm-12.pl-md-12.pl-sm-0.pl-1(
+                cols="5"
+                sm="3"
             )
                 create-contact(
                     @get-user-contacts="getUserContacts"
                 )
 
-        v-alert(
+        v-alert.mt-2(
             v-show="getContactsError"
             type="error"
         ) An error occured while getting contacts. Reload the page.
 
-        v-container
-            v-alert(
-                v-show="deleteError"
-                type="error"
-                dismissible
-                dense
-                close-icon="mdi-close"
-                max-width="300"
-                @click="closeError"
-            ) An error occured while deleting the contact. Reload the page.
+        v-alert.mb-0.mt-2.mx-md-12.mx-lg-12(
+            v-show="deleteError"
+            type="error"
+            dismissible
+            dense
+            close-icon="mdi-close"
+            @click="closeError"
+        ) An error occured while deleting the contact. Reload the page.
 
-            v-card.elevation-12.mb-3(
+        v-container.fill-height.d-flex
+            v-card.elevation-12.mb-3.mr-3.flex-grow-1.flex-md-grow-0.flex-lg-grow-0(
                 v-for="{ id, name, phone } in filteredContacts"
                 :key="'contact_' + id"
                 max-width="500"
+                min-width="270"
                 max-height="300"
             )
                 v-col.pb-0(
@@ -140,7 +138,7 @@ export default {
 
             // eslint-disable-next-line no-restricted-syntax
             for (const contact of this.contacts) {
-                if (contact.name.indexOf(this.searchedText) !== -1) {
+                if (contact.name.toLowerCase().indexOf(this.searchedText) !== -1) {
                     result.push(contact);
                 }
             }
