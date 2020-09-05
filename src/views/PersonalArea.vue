@@ -59,7 +59,7 @@
         ) An error occured while deleting the contact. Reload the page.
 
         v-container.fill-height.d-flex
-            v-card.elevation-12.mb-3.mr-3.flex-grow-1.flex-md-grow-0.flex-lg-grow-0(
+            v-card.elevation-12.mb-3.mr-3.flex-grow-1.flex-md-grow-0(
                 v-for="{ id, name, phone } in filteredContacts"
                 :key="'contact_' + id"
                 max-width="500"
